@@ -1,0 +1,4 @@
+delete pods 
+kubectl delete pod podname -- deletes pod
+kubectl delete svc nginx-service<service-name> --delete service
+
