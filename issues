@@ -1,0 +1,1393 @@
+
+
+Declarative (Manifest file) in k8s
+
+In Kubernetes (K8s), a Declarative (Manifest file) means you describe the desired state of your system, and Kubernetes will automatically make the cluster match that state.
+
+🔹 What is Declarative Approach?
+Instead of telling Kubernetes how to do things step-by-step (imperative), you simply define:
+
+👉 “This is how I want my application to look”
+
+Kubernetes takes care of:
+
+Creating resources
+
+Updating them
+
+Maintaining the desired state
+
+🔹 Manifest File (YAML)
+A manifest file is usually written in YAML and defines resources like:
+
+Pod
+
+Deployment
+
+Service
+
+ConfigMap
+
+etc.
+
+🔹 Example: Deployment Manifest
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+🔹 How it Works
+You apply this file using:
+
+kubectl apply -f deployment.yaml
+👉 Kubernetes will:
+
+Create 3 pods
+
+Ensure always 3 pods are running
+
+Replace failed pods automatically
+
+🔹 Declarative vs Imperative
+Feature	Declarative	Imperative
+Approach	Define desired state	Give commands
+Example	YAML file	kubectl run nginx
+Updates	kubectl apply	kubectl edit / recreate
+Best for	Production	Quick testing
+🔹 Key Advantages
+✅ Easy to version control (Git)
+✅ Repeatable deployments
+✅ Self-healing (K8s maintains state)
+✅ Works well with CI/CD
+
+🔹 Simple Analogy
+Declarative → “I want 3 running pods”
+
+Imperative → “Create pod 1, create pod 2, create pod 3”
+
+If you want, I can show:
+
+Full real-world manifest (Deployment + Service + Ingress)
+
+Or explain in Telugu 👍
+
+
+right hand figures shaking sometimes  
+
+If your right hand (fingers) are shaking sometimes, it’s called a tremor. This can be harmless—or sometimes a sign of an underlying issue.
+
+🔹 Common Causes (Most cases are not serious)
+1. Stress / Anxiety 😟
+When you're tense or nervous, hands may shake
+
+Happens during pressure situations
+
+2. Fatigue / Lack of Sleep 😴
+Overworking or poor sleep can trigger shaking
+
+3. Too Much Caffeine ☕
+Coffee, tea, energy drinks can overstimulate nerves
+
+4. Low Blood Sugar 🍬
+Skipping meals → shakiness
+
+Common in people with irregular eating habits
+
+5. Muscle Fatigue 💪
+After heavy work, gym, or repetitive hand use
+
+🔹 Medical Conditions (if frequent)
+6. Essential Tremor
+Common neurological condition
+
+Usually affects hands during movement
+
+7. Parkinson’s disease
+Tremor usually at rest
+
+Often starts on one side (like right hand)
+
+Slowness, stiffness also present
+
+8. Thyroid Issues
+Overactive thyroid can cause hand tremors
+
+9. Vitamin Deficiency
+Especially B12 deficiency
+
+🔹 When to Worry ⚠️
+See a doctor if:
+
+Tremor is getting worse
+
+Happens even at rest
+
+You notice weakness, stiffness, or slow movement
+
+It affects daily work (writing, eating)
+
+🔹 What You Can Do Now
+✔ Reduce caffeine
+✔ Sleep 7–8 hours
+✔ Eat regularly
+✔ Manage stress (breathing, walking)
+✔ Avoid alcohol/smoking
+
+🔹 Simple Self-Check
+Hold your hand straight → is it shaking?
+
+When resting → still shaking?
+
+Only during stress → likely normal
+
+If you want, tell me:
+
+Your age
+
+When it happens (rest / movement / stress)
+
+I can help you narrow down the exact cause 👍
+
+
+while using computer mouse
+
+If your right hand fingers shake while using a computer mouse, it’s usually related to muscle strain or nerve fatigue, not something serious—especially if it happens only during use.
+
+🔹 Most Likely Causes
+1. Muscle Fatigue (Very common)
+Continuous mouse use → small hand muscles get tired
+
+Leads to slight shaking when clicking or moving
+
+2. Repetitive Strain Injury (RSI)
+Long hours without breaks
+
+Similar to early stages of **Carpal Tunnel Syndrome
+
+Symptoms:
+
+Tingling
+
+Mild pain
+
+Weak grip
+
+Shaking during activity
+
+3. Poor Ergonomics 🖥️
+Mouse too small/big
+
+Wrist not supported
+
+Table height mismatch
+
+4. Nerve Irritation
+Continuous pressure on wrist
+
+Can affect finger control
+
+5. Stress / Overfocus
+Happens when concentrating hard or under pressure
+
+🔹 Quick Fixes (Start Today)
+✔ Take a break every 30–45 mins
+✔ Stretch fingers & wrist
+✔ Keep wrist straight (not bent)
+✔ Use a mouse pad with wrist support
+✔ Don’t grip mouse too tight
+
+🔹 Simple Exercises
+Open & close fist (10–15 times)
+
+Rotate wrist slowly
+
+Stretch fingers backward gently
+
+🔹 Upgrade Setup (Important)
+Try ergonomic mouse
+
+Adjust chair so elbow is at 90°
+
+Keep mouse close to keyboard
+
+🔹 When to Be Careful ⚠️
+Consult a doctor if:
+
+Shaking happens even without using mouse
+
+You feel numbness/tingling
+
+Pain increases
+
+Grip becomes weak
+
+🔹 Simple Understanding
+👉 Only while using mouse = mechanical / strain issue
+👉 Even at rest = need medical check
+
+If you want, I can suggest:
+
+Best mouse types (for long work)
+
+Desk setup for IT jobs
+
+Or explain in Telugu 👍
+
+
+cpus 2 meaning in aws 
+
+In Amazon Web Services (AWS), when you see “2 CPUs”, it usually refers to:
+
+🔹 👉 2 vCPUs (Virtual CPUs)
+🔹 What is a vCPU?
+A vCPU (virtual CPU) is a share of a physical processor core
+
+AWS uses virtualization to divide real CPUs into multiple vCPUs
+
+👉 So:
+
+2 CPUs = 2 vCPUs
+
+🔹 Simple Meaning
+Your instance can handle 2 parallel processing tasks
+
+Good for:
+
+Small applications
+
+Backend services
+
+Dev/test environments
+
+🔹 Example
+If you launch an EC2 instance like:
+
+t3.small → 2 vCPUs
+
+t2.medium → 2 vCPUs
+
+👉 It means:
+
+The instance has 2 logical processing units
+
+🔹 Real-World Analogy
+1 vCPU = 1 worker
+
+2 vCPUs = 2 workers doing tasks simultaneously
+
+🔹 Important Note
+vCPU ≠ physical CPU
+
+Usually:
+
+1 physical core = 2 vCPUs (hyper-threading)
+
+🔹 When You Need More CPUs
+Upgrade if:
+
+High traffic apps
+
+CPU usage > 70–80%
+
+Slow performance
+
+If you want, I can:
+
+Suggest best EC2 type for your use (Jenkins, K8s, etc.)
+
+Explain difference between vCPU, core, and threads 👍
+
+
+parsing pod.yml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+
+This error:
+
+parsing pod.yml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+means 👉 there is a YAML syntax problem, usually related to indentation or incorrect use of : (colon).
+
+🔹 Most Common Reasons
+1. ❌ Wrong Indentation
+YAML is very strict about spaces (not tabs).
+
+👉 Example (WRONG):
+
+spec:
+containers:
+- name: nginx
+👉 Correct:
+
+spec:
+  containers:
+  - name: nginx
+2. ❌ Missing space after :
+👉 Wrong:
+
+name:nginx
+👉 Correct:
+
+name: nginx
+3. ❌ Extra or misplaced :
+👉 Wrong:
+
+image: nginx:latest:1
+👉 Correct:
+
+image: nginx:latest
+4. ❌ Mixing tabs and spaces
+YAML only supports spaces
+
+Tabs will break parsing
+
+5. ❌ Incorrect key-value structure
+👉 Wrong:
+
+- name nginx
+👉 Correct:
+
+- name: nginx
+🔹 How to Debug (Quick Steps)
+Go to line 8 in your pod.yml
+
+Check:
+
+indentation (2 spaces recommended)
+
+colon : usage
+
+spacing after :
+
+🔹 Example Working Pod YAML
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+🔹 Pro Tip ✅
+Run:
+
+kubectl apply -f pod.yml --dry-run=client
+👉 It helps catch errors before applying
+
+🔹 If Still Confusing
+Paste your pod.yml here 👇
+I’ll fix the exact line 8 issue for you 👍
+
+
+how to write service to expose the nginx to access from browser
+
+To access your NGINX pod from a browser in Kubernetes, you need to create a Service that exposes it.
+
+🔹 Step 1: Make sure your Pod has a label
+Your pod (or Deployment) must have labels so the Service can find it.
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx   # 👈 important
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+🔹 Step 2: Create a Service (NodePort)
+This will expose NGINX so you can access it from your browser.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort
+  selector:
+    app: nginx   # 👈 matches pod label
+  ports:
+  - protocol: TCP
+    port: 80         # service port
+    targetPort: 80   # container port
+    nodePort: 30007  # external port (range: 30000–32767)
+🔹 Step 3: Apply the files
+kubectl apply -f pod.yml
+kubectl apply -f service.yml
+🔹 Step 4: Access in Browser 🌐
+Find your node IP:
+
+kubectl get nodes -o wide
+Then open:
+
+http://<Node-IP>:30007
+👉 You should see the NGINX welcome page
+
+🔹 Alternative (Easier for Testing)
+If you're using local cluster (like Minikube):
+
+minikube service nginx-service
+🔹 Service Types (Quick Understanding)
+Type	Use
+ClusterIP	Internal only
+NodePort	Access via IP:Port
+LoadBalancer	Cloud external IP
+🔹 Common Mistakes ❌
+Label mismatch (selector != pod label)
+
+Wrong port numbers
+
+NodePort not in range (30000–32767)
+
+If you want, I can also show:
+
+Deployment + Service + Ingress (real-world setup)
+
+Or explain this in Telugu 👍
+
+
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx - why label is req in this conf
+
+Good question 👍 — this is a core concept in Kubernetes.
+
+🔹 Why do we need labels?
+👉 Labels are used to identify and group resources (like Pods).
+
+Think of them like tags:
+
+app: nginx
+
+env: prod
+
+tier: frontend
+
+🔹 Main Reason: Service uses labels to find Pods
+Your Service has this:
+
+selector:
+  app: nginx
+👉 This means:
+
+“Send traffic to all Pods that have label app: nginx”
+
+🔹 How it works (Flow)
+Pod has label:
+
+labels:
+  app: nginx
+Service has selector:
+
+selector:
+  app: nginx
+Kubernetes connects them:
+👉 Service → finds matching Pods → sends traffic
+
+🔹 What if NO label? ❌
+Service cannot find your Pod
+
+No traffic routing
+
+Browser won’t work
+
+🔹 Real-Life Analogy
+Labels = Name tags on people
+
+Service = Teacher calling students
+
+👉 Teacher says: “All nginx students come here”
+
+Only students with tag nginx will respond.
+
+🔹 Important Concept
+Labels are used by:
+
+Services
+
+Deployments
+
+ReplicaSets
+
+Network Policies
+
+🔹 Example (Multiple Pods)
+labels:
+  app: nginx
+  env: prod
+You can even filter:
+
+selector:
+  app: nginx
+  env: prod
+🔹 Short Answer
+👉 Label is required so Service can identify and connect to the correct Pod
+
+If you want, I can show:
+
+What happens internally (Endpoints object)
+
+Or debug when Service is not connecting 👍
+
+
+Search the web for 13 233 208 56
+Checking the connection
+Checking the proxy and the firewall
+ERR_CONNECTION_REFUSED
+
+You are trying to open:
+
+http://13.233.208.56
+and getting:
+
+ERR_CONNECTION_REFUSED
+🔹 What this error actually means
+👉 Your browser reached the IP, but:
+
+❌ The server refused the connection
+
+This usually means:
+
+No service is running on that port
+
+OR access is blocked
+
+👉 It is NOT a DNS issue (IP is already resolved)
+
+📌 Technically:
+
+Browser sends request → server rejects it → error shown 
+
+🔹 Most Common Reasons (Important for AWS / K8s)
+1. ❌ NGINX / App not running
+No web server listening on port 80
+
+Very common in EC2 / Kubernetes
+
+👉 Check:
+
+ps -ef | grep nginx
+2. ❌ Port not exposed
+If using Kubernetes:
+
+Pod running ✅
+
+But Service not exposed ❌
+
+👉 Need:
+
+NodePort / LoadBalancer / Ingress
+
+3. ❌ AWS Security Group blocking
+In Amazon Web Services:
+
+👉 Check Security Group:
+
+Allow inbound:
+
+HTTP (80)
+
+OR NodePort (30000–32767)
+
+4. ❌ Firewall inside instance
+Linux firewall may block:
+
+sudo systemctl status firewalld
+5. ❌ Wrong port
+Maybe your app is running on:
+
+8080
+
+3000
+
+5000
+
+👉 Try:
+
+http://13.233.208.56:8080
+6. ❌ Kubernetes Service missing
+If you're using Kubernetes:
+
+👉 Check:
+
+kubectl get svc
+If no external port → browser won't work
+
+🔹 Quick Debug Checklist ✅
+Run inside server:
+
+curl localhost
+👉 If this fails → app not running
+
+Check open ports:
+
+netstat -tulnp | grep 80
+👉 If nothing → no service listening
+
+🔹 Simple Understanding
+Situation	Result
+Server not running	❌ Connection refused
+Port blocked	❌ Connection refused
+Service not exposed	❌ Connection refused
+Everything correct	✅ Browser works
+🔹 For YOU (Based on your K8s questions)
+Most likely issue 👇
+
+👉 You created Pod but NOT Service (NodePort)
+👉 Or port not opened in AWS
+
+🔹 If you want fast fix 🚀
+Send me:
+
+Your pod.yml
+
+Your service.yml
+
+Or tell:
+
+EC2 or local?
+
+Kubernetes or direct nginx?
+
+I’ll debug it exactly 👍
+
+
+
+root       19175   19150  0 15:48 ?        00:00:00 nginx: master process nginx -g daemon off;
+message+   19209   19175  0 15:48 ?        00:00:00 nginx: worker process
+root       23824   21381  0 16:18 pts/3    00:00:00 grep --color=auto nginx
+
+Good 👍 — this output tells us something important:
+
+nginx: master process
+nginx: worker process
+👉 NGINX is running successfully ✅
+
+🔴 Then why ERR_CONNECTION_REFUSED?
+Since NGINX is up, the problem is NOT the application.
+It’s almost certainly one of these 👇
+
+🔹 1. NGINX running inside container (K8s) but not exposed
+In Kubernetes, even if NGINX runs:
+
+👉 It is NOT accessible outside unless you expose it via Service.
+
+Check:
+kubectl get svc
+👉 If you don’t see:
+
+NodePort OR LoadBalancer → ❌ cannot access from browser
+
+🔹 2. AWS Security Group issue (VERY COMMON)
+In Amazon Web Services:
+
+👉 Even if everything is correct, AWS blocks traffic by default.
+
+You must allow:
+Port 80 (HTTP)
+OR
+
+NodePort range 30000–32767
+
+🔹 3. NGINX not listening on public interface
+Check:
+
+netstat -tulnp | grep 80
+👉 If you see:
+
+127.0.0.1:80
+❌ Problem:
+
+Only localhost access allowed
+
+👉 Should be:
+
+0.0.0.0:80
+🔹 4. Test inside server
+Run:
+
+curl localhost
+👉 If this works → NGINX OK
+👉 If fails → config issue
+
+🔹 5. If using Kubernetes (very likely in your case)
+👉 You need Service like this:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30007
+Then access:
+
+http://<EC2-IP>:30007
+🔹 Final Diagnosis 🎯
+Based on your info:
+
+✅ NGINX running
+❌ Browser not connecting
+
+👉 90% chance:
+
+Service not created (K8s)
+
+OR port blocked in AWS
+
+🔹 Quick Fix Checklist 🚀
+Do these now:
+
+kubectl get svc
+
+Open AWS → Security Group → allow port
+
+Try:
+
+http://13.233.208.56:30007
+If you want exact fix, send:
+
+kubectl get svc
+
+Your service.yml
+
+I’ll pinpoint the issue in 1 minute 👍
+
+
+
+curl: (7) Failed to connect to localhost port 80 after 0 ms: Couldn't connect to server
+
+This changes the diagnosis completely 👇
+
+curl: (7) Failed to connect to localhost port 80
+👉 Now it means:
+
+❌ Nothing is actually listening on port 80
+
+🔴 But you showed NGINX running?
+Yes — but in Kubernetes, this is a very common situation:
+
+👉 NGINX is running inside a container (Pod)
+👉 But you are testing from host machine
+
+➡️ So:
+
+curl localhost (host) ❌ fails
+
+NGINX is inside Pod network, not host
+
+🔹 Step-by-step confirmation
+1. Check Pods
+kubectl get pods -o wide
+2. Test inside the Pod ✅
+kubectl exec -it <pod-name> -- curl localhost
+👉 If this works:
+✔ NGINX is running correctly inside Pod
+
+🔹 Why host curl fails?
+Because:
+
+Location	Access
+Inside Pod	✅ localhost:80 works
+Host machine	❌ no direct access
+🔹 Solution → Expose using Service
+You MUST create a Service:
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort
+  selector:
+    app: nginx
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30007
+Apply it:
+kubectl apply -f service.yml
+Then access:
+http://13.233.208.56:30007
+🔹 Important Understanding
+👉 Pod network ≠ Host network
+
+Pod has its own IP
+
+Not accessible directly from outside
+
+🔹 Quick Visual
+Browser ❌ → EC2:80 (no service)
+Browser ✅ → EC2:30007 → Service → Pod → NGINX
+🔹 Final Root Cause 🎯
+👉 NGINX is running inside Pod only
+👉 No Service → no external access
+
+🔹 Do this now 🚀
+Create Service (NodePort)
+
+Open AWS Security Group port (30007)
+
+Access via browser
+
+If you paste:
+
+kubectl get pods
+kubectl get svc
+I’ll verify everything is correct 👍
+
+
+Open AWS Security Group port (30007)
+
+To fix your issue, you need to open port 30007 in Security Group in Amazon Web Services.
+
+Here’s the exact step-by-step 👇
+
+🔹 Step 1: Go to EC2 Dashboard
+Login to AWS Console
+
+Go to EC2 service
+
+Click Instances
+
+Select your instance (where K8s is running)
+
+🔹 Step 2: Open Security Group
+Scroll down → find Security tab
+
+Click on Security Group (it will be a link like sg-xxxx)
+
+🔹 Step 3: Edit Inbound Rules
+Click Edit inbound rules
+
+Click Add rule
+
+🔹 Step 4: Add NodePort Rule
+Fill like this:
+
+Type → Custom TCP
+
+Port range → 30007
+
+Source → 0.0.0.0/0 (for testing)
+
+👉 Example:
+
+Type: Custom TCP
+Port: 30007
+Source: 0.0.0.0/0
+Click Save rules
+
+🔹 Step 5: Access in Browser 🌐
+Now open:
+
+http://13.233.208.56:30007
+👉 You should see NGINX welcome page
+
+🔹 🔐 Important (For Production)
+Instead of:
+
+0.0.0.0/0
+Use:
+
+Your IP only (more secure)
+
+🔹 Quick Checklist ✅
+ Pod running
+
+ Service created (NodePort 30007)
+
+ Security Group opened
+
+ Correct IP used
+
+🔹 If still not working ❌
+Run and share:
+
+kubectl get svc
+kubectl get pods
+I’ll debug it instantly 👍
+
+
+still facing issue
+
+Alright — since it’s still not working, let’s debug this step-by-step like a real DevOps issue 🔍 (you’re very close 👍)
+
+🔴 First: Confirm what is working / not
+We already know:
+
+✅ NGINX process running (inside container)
+
+❌ curl localhost from host fails
+
+❌ Browser → ERR_CONNECTION_REFUSED
+
+👉 So issue is definitely exposure / networking
+
+🔹 Step 1: Check Service (VERY IMPORTANT)
+Run:
+
+kubectl get svc
+👉 Share output, but it should look like:
+
+NAME            TYPE       PORT(S)        AGE
+nginx-service   NodePort   80:30007/TCP   5m
+❗ If you DON’T see NodePort:
+👉 Service not created properly
+
+🔹 Step 2: Check Endpoints (CRITICAL)
+kubectl get endpoints
+👉 Expected:
+
+nginx-service   10.x.x.x:80
+❌ If you see:
+<none>
+👉 ROOT CAUSE FOUND 🚨
+➡️ Service is NOT connected to Pod (label mismatch)
+
+🔹 Step 3: Check Labels Match
+Pod:
+kubectl get pods --show-labels
+Example:
+
+nginx-pod   app=nginx
+Service:
+kubectl describe svc nginx-service
+Check:
+
+Selector: app=nginx
+👉 MUST match exactly
+
+🔹 Step 4: Test from inside cluster
+kubectl run test --rm -it --image=busybox -- sh
+Then inside:
+
+wget -qO- nginx-service
+👉 If this fails:
+➡️ Service issue
+
+🔹 Step 5: Check NodePort listening on host
+On EC2:
+
+netstat -tulnp | grep 30007
+👉 If nothing:
+➡️ Service not exposed properly
+
+🔹 Step 6: AWS check (again)
+In Amazon Web Services:
+
+Port 30007 open ✅
+
+Instance Public IP correct ✅
+
+🔹 Most Common Root Causes (based on experience)
+🔥 1. Label mismatch (MOST COMMON)
+Pod:
+
+app: nginx
+Service:
+
+app: ngnix   ❌ typo
+🔥 2. Pod not ready
+kubectl get pods
+👉 STATUS must be:
+
+Running
+🔥 3. Wrong port mapping
+Pod:
+
+containerPort: 80
+Service:
+
+targetPort: 80
+🔹 Final Fast Debug 🚀
+Paste these 3 outputs:
+
+kubectl get pods -o wide
+kubectl get svc
+kubectl get endpoints
+👉 I’ll tell you EXACT issue in one reply (no guessing)
+
+You’re very close — this is a classic Kubernetes Service exposure issue 👍
+
+
+nginx-service   <none>              20m
+
+🔥 Got it — this line tells us the exact root cause:
+
+nginx-service   <none>   20m
+👉 <none> under ENDPOINTS = Service is NOT connected to any Pod
+
+🔴 What this means
+In Kubernetes:
+
+Your Service exists ✅
+But it cannot find any matching Pods ❌
+
+So:
+
+Traffic comes to Service
+
+Service has no backend Pods
+
+Result → ERR_CONNECTION_REFUSED
+
+🔹 Root Cause 🎯
+👉 Label mismatch between Pod and Service
+
+🔹 Step 1: Check Pod labels
+Run:
+
+kubectl get pods --show-labels
+Example output:
+
+nginx-pod   app=nginx
+🔹 Step 2: Check Service selector
+kubectl describe svc nginx-service
+Look for:
+
+Selector: app=nginx
+🔴 Problem Example
+Pod:
+labels:
+  app: nginx
+Service:
+selector:
+  app: ngnix   ❌ typo
+👉 Result:
+
+ENDPOINTS: <none>
+🔹 Step 3: Fix it
+✅ Option 1: Fix Service
+Edit service:
+
+kubectl edit svc nginx-service
+Make sure:
+
+selector:
+  app: nginx
+✅ Option 2: Fix Pod (better if needed)
+metadata:
+  labels:
+    app: nginx
+Then re-apply:
+
+kubectl apply -f pod.yml
+🔹 Step 4: Verify ✅
+Run again:
+
+kubectl get endpoints
+👉 Now you should see:
+
+nginx-service   10.x.x.x:80
+🔹 Step 5: Test 🚀
+Now open:
+
+http://13.233.208.56:30007
+👉 ✅ NGINX page should load
+
+🔹 Simple Understanding
+Issue	Result
+Labels mismatch	❌ No endpoints
+No endpoints	❌ No traffic
+Fix labels	✅ Works
+🔥 Final Answer
+👉 Your issue is 100% label mismatch
+
+If you paste:
+
+your pod.yml
+
+your service.yml
+
+I’ll correct them perfectly for you 👍
+
+
+
+kubernetes      192.168.49.2:8443   59m
+nginx-service   10.244.0.3:80       27m
+root@miniqube:/home/ubuntu# kubectl get pods -o wide
+kubectl get svc
+kubectl get endpoints
+
+Command 'ubectl' not found, did you mean:
+  command 'usectl' from snap usectl (1.0.17)
+  command 'kubectl' from snap kubectl (1.34.6)
+See 'snap info <snapname>' for additional versions.
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes      ClusterIP   10.96.0.1       <none>        443/TCP        59m
+nginx-service   NodePort    10.110.200.67   <none>        80:30007/TCP   28m
+Warning: v1 Endpoints is deprecated in v1.33+; use discovery.k8s.io/v1 EndpointSlice
+NAME            ENDPOINTS           AGE
+kubernetes      192.168.49.2:8443   59m
+nginx-service   10.244.0.3:80       28m
+
+Great 👍 — now your output clearly shows everything is almost correct. Let’s break it down:
+
+🔹 What is working ✅
+From your output:
+
+nginx-service   NodePort   80:30007/TCP
+👉 Service is created correctly
+
+nginx-service   10.244.0.3:80
+👉 Endpoints are present ✅ (VERY GOOD — label issue is FIXED)
+
+🔴 Then why still not opening in browser?
+👉 Because you are using Minikube, not AWS EC2 directly.
+
+🔥 Root Cause
+Minikube runs inside:
+
+VM / container network
+
+NOT directly exposed to your public IP (13.233.208.56)
+
+👉 So this will NOT work:
+
+http://13.233.208.56:30007 ❌
+🔹 Correct Way in Minikube ✅
+👉 Option 1 (BEST)
+Run:
+
+minikube service nginx-service
+👉 This will:
+
+Open browser automatically
+
+OR give a URL like:
+
+http://192.168.xx.xx:30007
+👉 Option 2: Get Minikube IP
+minikube ip
+Example output:
+
+192.168.49.2
+Then open:
+
+http://192.168.49.2:30007
+🔹 Why your public IP doesn’t work
+Thing	Reality
+EC2 Public IP	Outside world
+Minikube	Internal VM
+Connection	❌ Not directly mapped
+🔹 Simple Architecture
+Browser ❌ → 13.233.208.56
+           ↓
+        EC2 Host
+           ↓
+        Minikube VM (hidden)
+           ↓
+        Pod (NGINX)
+👉 You are missing the bridge
+
+🔹 Final Fix 🚀
+✔ Run:
+
+minikube service nginx-service
+OR
+
+✔ Run:
+
+minikube ip
+Then:
+
+http://<minikube-ip>:30007
+🔥 Final Answer
+👉 Your setup is CORRECT
+👉 Issue is Minikube networking (not AWS / K8s mistake)
+
+If you want next level:
+
+Access Minikube from public internet
+
+Or move to real AWS LoadBalancer
+
+I can guide you 👍
+
+
+still no luck ? http://192.168.49.2:30007
+
+You’re very close 👍 — since everything looks correct but http://192.168.49.2:30007 still not working, let’s pinpoint the issue quickly.
+
+🔴 First: Confirm your setup
+You are using Minikube inside an EC2 instance.
+
+👉 This is the key problem.
+
+🔥 Root Cause (Important)
+👉 192.168.49.2 is Minikube internal IP
+👉 It is NOT accessible from your local browser
+
+So:
+
+Your Laptop ❌ → 192.168.49.2 (blocked)
+Because:
+
+It exists inside EC2 VM network
+
+Not exposed to internet
+
+🔹 Working Solutions ✅
+✅ Option 1: Use SSH Port Forwarding (BEST)
+From your local machine, run:
+
+ssh -i <key.pem> -L 30007:192.168.49.2:30007 ubuntu@13.233.208.56
+Then open in your browser:
+
+http://localhost:30007
+👉 This will work 🔥
+
+✅ Option 2: Use kubectl port-forward
+On EC2:
+
+kubectl port-forward svc/nginx-service 8080:80 --address=0.0.0.0
+Then open:
+
+http://13.233.208.56:8080
+👉 Make sure AWS Security Group allows 8080
+
+✅ Option 3: Run Minikube service (test inside EC2)
+minikube service nginx-service --url
+👉 It will give something like:
+
+http://127.0.0.1:xxxxx
+👉 Works only inside EC2 (not your laptop)
+
+🔹 Why your current approach fails
+URL	Result	Reason
+13.233.208.56:30007	❌	Not mapped
+192.168.49.2:30007	❌	Private Minikube IP
+localhost:30007 (after SSH tunnel)	✅	Correct
+🔥 Recommended Fix (Do this)
+👉 Use SSH tunneling — simplest and most reliable
+
+🔹 Quick Summary
+👉 Your Kubernetes setup is correct ✅
+👉 Problem is network path (EC2 → Minikube → your laptop)
+
+If you want next step:
+
+Expose via Ingress + public domain
+
+Or run Kubernetes without Minikube on EC2
+
+I can guide you 👍
+
+
+why this req kubectl port-forward svc/nginx-service 8080:80 --address=0.0.0.0
+
+Good question 👍 — this command looks confusing, but it’s actually simple once you break it down.
+
+🔹 Command
+kubectl port-forward svc/nginx-service 8080:80 --address=0.0.0.0
+Used in Kubernetes
+
+🔹 Why this is required?
+👉 Because your NGINX is running inside Kubernetes (Minikube)
+👉 It is NOT directly accessible from outside (your browser)
+
+So we create a temporary tunnel from outside → inside cluster.
+
+🔹 What this command does
+Breakdown:
+🔸 kubectl port-forward
+Creates a tunnel from your machine → Kubernetes resource
+
+🔸 svc/nginx-service
+👉 Forward traffic to your Service (not directly pod)
+
+🔸 8080:80
+👉 Means:
+
+Local Port	Cluster Port
+8080	80
+So:
+
+http://13.233.208.56:8080 → nginx-service → Pod → NGINX
+🔸 --address=0.0.0.0 (VERY IMPORTANT)
+👉 Default behavior:
+
+localhost only (127.0.0.1)
+👉 With this flag:
+
+Accessible from outside (public IP)
+🔴 Why you need this in your case
+You are using:
+
+Minikube inside EC2
+
+👉 Problem:
+
+Minikube network is isolated
+
+NodePort IP (192.168.49.2) is not reachable from your laptop
+
+🔹 So this command acts like a bridge
+Your Laptop
+   ↓
+EC2 Public IP:8080
+   ↓ (port-forward)
+Kubernetes Service:80
+   ↓
+Pod (NGINX)
+🔹 Without this command ❌
+Browser cannot reach Minikube
+
+NodePort won’t work externally
+
+🔹 With this command ✅
+You can open:
+
+http://13.233.208.56:8080
+🔹 Important Notes
+This is temporary (dev/test only)
+
+Stops when terminal closes
+
+Not for production
+
+🔹 Simple Analogy
+👉 Port-forward = temporary pipe/tunnel
+
+Without it:
+
+Outside ❌ → Inside cluster
+With it:
+
+Outside ✅ → Tunnel → Inside cluster
+🔥 Final Answer
+👉 You need this because Minikube is not directly accessible from outside
+👉 port-forward creates a bridge between your browser and Kubernetes service
+
+If you want, I can show:
+
+Permanent solution (Ingress / LoadBalancer)
+
+Or how to avoid Minikube in EC2 (better setup) 👍
+
+
+
+
